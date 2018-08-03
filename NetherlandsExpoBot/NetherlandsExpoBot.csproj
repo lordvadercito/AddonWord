@@ -15,6 +15,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ProjectGuid>{D5B720CF-1174-468E-B59A-FA0F9119E4AD}</ProjectGuid>
+    <SolutionID>083e269b-ce3e-491e-be56-e08b588c9949</SolutionID>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
@@ -100,10 +101,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="NetherlandsRibbon.resx">
+      <DependentUpon>NetherlandsRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThisDocument.resx">
+      <DependentUpon>ThisDocument.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="HC 481 Holanda.dotx" />
+    <Compile Include="HashTableElementos.cs" />
+    <Compile Include="NetherlandsRibbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NetherlandsRibbon.Designer.cs">
+      <DependentUpon>NetherlandsRibbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remito.cs" />
+    <Compile Include="RemitoItem.cs" />
     <Compile Include="ThisDocument.cs">
       <DependentUpon>HC 481 Holanda.dotx</DependentUpon>
     </Compile>
+    <None Include="NetherlandsExpoBot_TemporaryKey.pfx" />
     <None Include="ThisDocument.Designer.xml">
       <DependentUpon>ThisDocument.cs</DependentUpon>
     </None>
@@ -133,6 +150,15 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NetherlandsExpoBot_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C98A28460931C481E534D50C5F5F88972379A669</ManifestCertificateThumbprint>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
