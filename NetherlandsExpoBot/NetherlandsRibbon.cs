@@ -69,8 +69,8 @@ namespace NetherlandsExpoBot
 
             }
 
-            RichTextContentControl netoTotalPosicionado = Globals.ThisDocument.hashTableElementos.GetControl("rtcTotalBultos");
-            RichTextContentControl bultosTotalPosicionado = Globals.ThisDocument.hashTableElementos.GetControl("rtcTotalesKilos");
+            RichTextContentControl netoTotalPosicionado = Globals.ThisDocument.hashTableElementos.GetControl("rtcTotalesKilos"); 
+            RichTextContentControl bultosTotalPosicionado = Globals.ThisDocument.hashTableElementos.GetControl("rtcTotalBultos");
             RichTextContentControl netoGrid = Globals.ThisDocument.hashTableElementos.GetControl("rtcPesoNetoGrid");
             RichTextContentControl bultosGrid = Globals.ThisDocument.hashTableElementos.GetControl("rtcBultosGrid");
             RichTextContentControl bultosSup = Globals.ThisDocument.hashTableElementos.GetControl("rtcBultos");
