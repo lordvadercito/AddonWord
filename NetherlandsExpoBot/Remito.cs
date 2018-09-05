@@ -8,7 +8,7 @@ namespace NetherlandsExpoBot
     {
         public List<RemitoItem> remitoList { get; set; }
 
-        public Remito GetRemitoNro(int remitoValue)
+        public Remito GetRemitoNro(string remitoValue)
         {
             List<RemitoItem> remitoList = new List<RemitoItem>();
             var connStr = "Server = 10.1.100.26,50624; Database = sanitariosDB; User Id = gestorDevesa; Password = juampa;";//Production connection

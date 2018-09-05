@@ -456,6 +456,18 @@ namespace NetherlandsExpoBot
 
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcVapor;
 
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCuotaSpanish;
+
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCuotaEnglish;
+
+        internal Microsoft.Office.Tools.Word.DatePickerContentControl rtcFecha;
+
+        internal Microsoft.Office.Tools.Word.DatePickerContentControl rtcFecha1;
+
+        internal Microsoft.Office.Tools.Word.DatePickerContentControl rtcFechaDesde1;
+
+        internal Microsoft.Office.Tools.Word.DatePickerContentControl rtcFechaHasta1;
+
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
 
@@ -789,6 +801,12 @@ namespace NetherlandsExpoBot
             this.rtcTotalesKilos.BeginInit();
             this.rtcVapor.BeginInit();
             this.rtcPesoBruto.BeginInit();
+            this.rtcCuotaSpanish.BeginInit();
+            this.rtcCuotaEnglish.BeginInit();
+            this.rtcFecha.BeginInit();
+            this.rtcFecha1.BeginInit();
+            this.rtcFechaDesde1.BeginInit();
+            this.rtcFechaHasta1.BeginInit();
         }
 
         /// 
@@ -797,6 +815,12 @@ namespace NetherlandsExpoBot
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization()
         {
+            this.rtcFechaHasta1.EndInit();
+            this.rtcFechaDesde1.EndInit();
+            this.rtcFecha1.EndInit();
+            this.rtcFecha.EndInit();
+            this.rtcCuotaEnglish.EndInit();
+            this.rtcCuotaSpanish.EndInit();
             this.rtcPesoBruto.EndInit();
             this.rtcTotalesKilos.EndInit();
             this.rtcTotalBultos.EndInit();
@@ -1452,6 +1476,14 @@ namespace NetherlandsExpoBot
             hashTableElementos.AddControl(rtcVapor);
             this.rtcPesoBruto = Globals.Factory.CreateRichTextContentControl(null, null, "1613008757", "rtcPesoBruto", this);
             hashTableElementos.AddControl(rtcPesoBruto);
+            this.rtcCuotaSpanish = Globals.Factory.CreateRichTextContentControl(null, null, "805434539", "rtcCuotaSpanish", this);
+            hashTableElementos.AddControl(rtcCuotaSpanish);
+            this.rtcCuotaEnglish = Globals.Factory.CreateRichTextContentControl(null, null, "2220542351", "rtcCuotaEnglish", this);
+            hashTableElementos.AddControl(rtcCuotaEnglish);
+            this.rtcFecha = Globals.Factory.CreateDatePickerContentControl(null, null, "1990825909", "rtcFecha", this);
+            this.rtcFecha1 = Globals.Factory.CreateDatePickerContentControl(null, null, "708462032", "rtcFecha1", this);
+            this.rtcFechaDesde1 = Globals.Factory.CreateDatePickerContentControl(null, null, "3587554568", "rtcFechaDesde1", this);
+            this.rtcFechaHasta1 = Globals.Factory.CreateDatePickerContentControl(null, null, "1137531488", "rtcFechaHasta1", this);
         }
 
         /// 
@@ -1522,9 +1554,9 @@ namespace NetherlandsExpoBot
             // 
             this.datePickerContentControl4.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // datePickerContentControl5
+            // rtcFecha
             // 
-            this.datePickerContentControl5.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.rtcFecha.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // datePickerContentControl6
             // 
@@ -2344,8 +2376,34 @@ namespace NetherlandsExpoBot
 
             this.rtcVapor.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // ThisDocument
+            // rtcCuotaSpanish
             // 
+            this.rtcCuotaSpanish.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcCuotaEnglish
+            // 
+            this.rtcCuotaEnglish.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            //  datePickerContentControl5
+            // 
+            this.datePickerContentControl5.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+
+            this.rtcFecha.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcFecha1
+            // 
+            this.rtcFecha1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcFechaDesde1
+            // 
+            this.rtcFechaDesde1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcFechaHasta1
+            // 
+            this.rtcFechaHasta1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // ThisDocument
+            //   
         }
 
         /// 
@@ -2362,6 +2420,12 @@ namespace NetherlandsExpoBot
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown()
         {
+            this.rtcFechaHasta1.Dispose();
+            this.rtcFechaDesde1.Dispose();
+            this.rtcFecha1.Dispose();
+            this.datePickerContentControl5.Dispose();
+            this.rtcCuotaEnglish.Dispose();
+            this.rtcCuotaSpanish.Dispose();
             this.rtcPesoBruto.Dispose();
             this.rtcTotalesKilos.Dispose();
             this.rtcTotalBultos.Dispose();
@@ -2564,7 +2628,7 @@ namespace NetherlandsExpoBot
             this.rtcMercaderiaGrid0.Dispose();
             this.rtcBultosGrid0.Dispose();
             this.datePickerContentControl6.Dispose();
-            this.datePickerContentControl5.Dispose();
+            this.rtcFecha.Dispose();
             this.datePickerContentControl4.Dispose();
             this.rtcPesoNetoGrid.Dispose();
             this.rtcBultosGrid.Dispose();

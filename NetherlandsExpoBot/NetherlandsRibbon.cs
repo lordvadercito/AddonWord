@@ -17,9 +17,9 @@ namespace NetherlandsExpoBot
         private void remitoSearch_TextChanged(object sender, RibbonControlEventArgs e)
         {
             string remito = this.remitoSearch.Text;
-            int remitoInt = Int32.Parse(remito);
+            //int remitoInt = Int32.Parse(remito);
             Remito remitoBusqueda = new Remito();
-            Remito remitoResult = remitoBusqueda.GetRemitoNro(remitoInt);
+            Remito remitoResult = remitoBusqueda.GetRemitoNro(remito);
             int countRemitos = remitoResult.remitoList.Count();
 
             // Elementos de primera parte del anexo
@@ -76,6 +76,8 @@ namespace NetherlandsExpoBot
             RichTextContentControl bultosSup = Globals.ThisDocument.hashTableElementos.GetControl("rtcBultos");
             RichTextContentControl netoSup = Globals.ThisDocument.hashTableElementos.GetControl("rtcPesoNeto");
             RichTextContentControl brutoSup = Globals.ThisDocument.hashTableElementos.GetControl("rtcPesoBruto");
+            RichTextContentControl cuotaSpanish = Globals.ThisDocument.hashTableElementos.GetControl("rtcCuotaSpanish");
+            RichTextContentControl cuotaEnglish = Globals.ThisDocument.hashTableElementos.GetControl("rtcCuotaEnglish");
 
             netoTotalPosicionado.Text = sumaNeto.ToString();
             bultosTotalPosicionado.Text = sumaBultos.ToString();
@@ -84,6 +86,19 @@ namespace NetherlandsExpoBot
             bultosSup.Text = sumaBultos.ToString();
             netoSup.Text = sumaNeto.ToString();
             brutoSup.Text = sumaBruto.ToString();
+
+            String primerProducto = remitoResult.remitoList[0].Descripcion.ToString();
+
+            if (primerProducto.Contains("(W)"))
+            {
+                cuotaSpanish.Text = "481";
+                cuotaEnglish.Text = "481";
+            }
+            else if (primerProducto.Contains("(H)"))
+            {
+                cuotaSpanish.Text = "HILTON";
+                cuotaEnglish.Text = "HILTON";
+            }
 
         }
     }
